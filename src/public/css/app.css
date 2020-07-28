@@ -1,0 +1,97 @@
+.App, .AppPage, .AppPage-Content {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.AppPage {
+  position: absolute;
+  top: -200vh;
+  left: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.AppPage:target, .AppPage:first-child {
+  top: 0;
+  pointer-events: all;
+}
+
+.AppPage-Content {
+  position: relative;
+}
+
+.GameContainer {
+  color: #222;
+  width: 520px;
+}
+
+.GameContainer p {
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+  margin-top: 1em;
+}
+
+.GameContainer .Scores {
+  width: 100%;
+  padding: 1em 0;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.GameContainer .Score:first-child {
+  color: red;
+  justify-content: flex-start;
+}
+
+.GameContainer .Score:last-child {
+  color: black;
+  justify-content: flex-end;
+}
+
+.GameContainer .Timer {
+  color: blue;
+  justify-content: center;
+}
+
+.GameBoard {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(8, 1fr);
+  width: 100%;
+  height: 520px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.GameBoard > div:not(.Checker) {
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.GameBoard > div:hover {
+  opacity: 1;
+}
+
+.Checker {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  z-index: 10;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.Checker:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+}
+
+.Checker[data-type="king"] {
+  background-size: 100% 100%;
+  background-position: center center;
+  background-image: url('../assets/img/crown.png');
+}

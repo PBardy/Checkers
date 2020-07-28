@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkers</title>
+
+  <link rel="stylesheet" type="text/css" href="public/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="public/css/app.css" />
+  <link rel="stylesheet" type="text/css" href="public/css/pages.css" />
+  <link rel="stylesheet" type="text/css" href="public/css/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="public/css/animations.css" />
+  <link rel="stylesheet" type="text/css" href="public/css/media.css" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <script type="module" src="./public/js/app.js" defer></script>
+  <script src="./public/js/main.js"></script>
+
+</head>
+
+<body>
+  <div class="App">
+    <div class="AppPage" id="page0">
+      <div class="Vbox Center AppPage-Content">
+        <div class="Vbox Expand Center GameContainer">
+          <div class="Hbox Scores">
+            <div class="Hbox Expand Score">
+              <span>Red</span>
+              <span id="player1-score">0</span>
+            </div>
+            <div class="Hbox Expand Timer">
+              <span id="timer-output">00:00</span>
+            </div>
+            <div class="Hbox Expand Score">
+              <span id="player2-score">0</span>
+              <span>Black</span>
+            </div>
+          </div>
+          <div class="GameBoard" id="GameBoard"></div>
+          <div class="Hbox">
+            <p><b>Instructions: </b> click on a checker to select it. Clicking on the selected checker
+              again will unselect it.</p>
+          </div>
+          <div class="Hbox">
+            <p><b>Rules: </b>Each player takes it in turns to move their pieces, with red starting first. Moves can
+              only be diagonal and, whilst a piece is not kinged, can only move forwards. Pieces can only move forwards
+              onto an empty tile. If their is an opponent's piece, which is diagonally adjacent, and the next
+              tile along this diagonal is vacant. A piece can jump over the opponent piece and remove it from
+              the board.
+            </p>
+          </div>
+          <div class="Hbox">
+            <p><b>Win condition: </b> remove all of your opponent's pieces. Or ensure they can no longer move on their
+              turn.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
